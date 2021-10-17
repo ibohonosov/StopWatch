@@ -1,0 +1,14 @@
+<div class="main center">
+  <div class="container center">
+    <h2>
+      {{ stopWatch.hours }}:{{ stopWatch.minutes }}:{{ stopWatch.seconds }}
+    </h2>
+
+    <button type="submit" (click)="startTimer()" *ngIf="!nextBtn">Start</button>
+    <div class="buttons" *ngIf="nextBtn">
+      <button (click)="stopTimer()">Stop</button>
+      <button (click)="dbClickCheck()" #dbClick>Wait</button>
+      <button (click)="resetTimer()">Reset</button>
+    </div>
+  </div>
+</div>
